@@ -1,14 +1,113 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.App {
+  background-color: #404550;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
+
+.App-header {
+  background-color: #282c34;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.scoreboard__score {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.scoreboard__user-score,
+.scoreboard__bot-score,
+.scoreboard__delimiter {
+  font-size: 6rem;
+  text-align: center;
+}
+
+.scoreboard__user-score,
+.scoreboard__bot-score {
+  background-color: #41444b;
+  padding: 0px 40px;
+  border-radius: 5px;
+}
+
+.scoreboard__label {
+  font-size: 1rem;
+}
+
+.scoreboard__alert {
+  margin-top: 10px;
+}
+
+.scoreboard__winner-glow {
+  background-color: #2cd83b;
+  box-shadow: 0 0 10px #1c301c;
+  color: #282c34;
+}
+/* End of Scoreboard */
+
+/* RPS_Buttons */
+.RPS_Buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-width: 350px;
+}
+
+.RPS_Button {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 20px 20px;
+  transition: all 100ms;
+}
+
+.RPS_Button__Icon {
+  pointer-events: none;
+  font-size: 4rem;
+}
+
+.RPS_Button__winner-highlight {
+  color: greenyellow;
+  border-color: greenyellow;
+  box-shadow: 0 0 10px #2cd83b;
+}
+
+.RPS_Button__loser-highlight {
+  color: crimson;
+  border-color: crimson;
+  box-shadow: 0 0 10px #5f1904;
+}
+
+.RPS_Button__draw-highlight {
+  color: #36373a;
+  border-color: #36373a;
+  box-shadow: 0 0 10px #212224;
+}
+/* End of RPS_Buttons */
