@@ -54,7 +54,7 @@ body {
 .scoreboard__user-score,
 .scoreboard__bot-score {
   background-color: #41444b;
-  padding: 0px 40px;
+  padding: 0px 30px;
   border-radius: 5px;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .scoreboard__alert {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .scoreboard__winner-glow {
@@ -109,5 +109,9 @@ body {
   color: #36373a;
   border-color: #36373a;
   box-shadow: 0 0 10px #212224;
+}
+
+.RPS_Buttons .RPS_Button svg {
+  width: 1em;
 }
 /* End of RPS_Buttons */
